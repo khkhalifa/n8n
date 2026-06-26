@@ -42,7 +42,7 @@ describe('analyzePackage', () => {
 				peerDependencies: { 'n8n-workflow': '*' },
 				overrides: { 'change-case': '4.1.2' },
 			},
-			'index.js': "module.exports = {};\n",
+			'index.js': 'module.exports = {};\n',
 		});
 
 		const result = await analyzePackage(fixtureDir);
@@ -59,7 +59,7 @@ describe('analyzePackage', () => {
 				keywords: ['n8n-community-node-package'],
 				peerDependencies: { 'n8n-workflow': '*' },
 			},
-			'index.js': "module.exports = {};\n",
+			'index.js': 'module.exports = {};\n',
 		});
 
 		const result = await analyzePackage(fixtureDir);
@@ -76,7 +76,7 @@ describe('analyzePackage', () => {
 				peerDependencies: { 'n8n-workflow': '*' },
 				scripts: { postinstall: 'node ./malicious.js' },
 			},
-			'index.js': "module.exports = {};\n",
+			'index.js': 'module.exports = {};\n',
 		});
 
 		const result = await analyzePackage(fixtureDir);

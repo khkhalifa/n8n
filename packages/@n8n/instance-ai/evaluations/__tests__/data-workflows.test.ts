@@ -163,7 +163,9 @@ describe('loadWorkflowTestCasesWithFiles', () => {
 				.sort();
 
 			expect(inPr).toEqual(['weather-alert']);
-			const allSlugs = loadWorkflowTestCasesWithFiles().map((c) => c.fileSlug).sort();
+			const allSlugs = loadWorkflowTestCasesWithFiles()
+				.map((c) => c.fileSlug)
+				.sort();
 			expect(inFull).toEqual(allSlugs);
 		});
 
